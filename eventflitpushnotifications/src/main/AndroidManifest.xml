@@ -1,0 +1,52 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eventflit.pushnotifications" >
+    <permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE"/>
+
+    <application>
+        <receiver
+            android:name="com.eventflit.pushnotifications.reporting.FCMMessageReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.eventflit.pushnotifications.reporting.ReportingJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.eventflit.pushnotifications.fcm.FCMInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.eventflit.pushnotifications.fcm.FCMMessagingService">
+            <intent-filter android:priority="1">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <provider
+            android:authorities="${applicationId}.pushnotificationsinitprovider"
+            android:name="com.eventflit.pushnotifications.internal.PushNotificationsInitProvider"
+            android:exported="false"
+            android:initOrder="99" />
+
+        <activity android:name="com.eventflit.pushnotifications.reporting.OpenNotificationActivity">
+            <intent-filter>
+                <action android:name="com.eventflit.pushnotifications.OPEN_TRACKING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

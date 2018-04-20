@@ -1,0 +1,21 @@
+*.iml
+/.idea
+.DS_Store
+/captures
+.externalNativeBuild
+
+classes
+bin
+gen
+build
+out
+lib
+
+google-services.json
+
+# Gradle
+.gradle
+jniLibs
+build
+/local.properties
+reports

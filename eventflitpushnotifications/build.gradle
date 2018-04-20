@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply from: 'maven-push.gradle'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "0.9.13"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    defaultConfig {
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    testImplementation 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:2.13.0"
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:${versions.kotlin}"
+
+    provided "com.google.android.gms:play-services-gcm:${versions.playServices}"
+    provided "com.google.firebase:firebase-core:${versions.playServices}"
+    provided "com.google.firebase:firebase-messaging:${versions.playServices}"
+
+    compile 'com.firebase:firebase-jobdispatcher:0.8.5'
+
+    lintChecks project(':eventflitpushnotifications-lint')
+}
+
+repositories {
+    mavenCentral()
+}

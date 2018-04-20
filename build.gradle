@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.versions = [
+        kotlin: '1.2.30',
+
+        androidPlugin: '3.0.0',
+        androidTools: '27.0.2',
+        androidLintTools: '26.0.0',
+        playServices: '11.8.0',
+    ]
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.google.gms:google-services:3.1.0'
+    }
+
+    ext.deps = [
+        androidPlugin: "com.android.tools.build:gradle:${versions.androidPlugin}",
+
+        lint: [
+            'core': "com.android.tools.lint:lint:${versions.androidLintTools}",
+            'api': "com.android.tools.lint:lint-api:${versions.androidLintTools}",
+            'checks': "com.android.tools.lint:lint-checks:${versions.androidLintTools}",
+            'tests': "com.android.tools.lint:lint-tests:${versions.androidLintTools}",
+        ],
+    ]
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
