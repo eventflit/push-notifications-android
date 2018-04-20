@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:66386594277:android:d75848e9db543d2c",
         "android_client_info": {
-          "package_name": "com.eventflittest"
+          "package_name": "com.eventflit.pushnotifications.sample"
         }
       },
       "oauth_client": [
