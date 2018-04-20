@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "66386594277",
+    "firebase_url": "https://eventflit-push-test.firebaseio.com",
+    "project_id": "eventflit-push-test",
+    "storage_bucket": "eventflit-push-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66386594277:android:d75848e9db543d2c",
+        "android_client_info": {
+          "package_name": "com.eventflittest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66386594277-5sgb2qbchal0napap0e4u6eq82vkj4vb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuAigjrRknfg6uCT65SKw3En4Oh5E9U34"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
