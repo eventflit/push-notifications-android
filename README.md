@@ -1,9 +1,8 @@
-# Push Notifications Android 
+# Eventflit Push Notifications Android 
 
-[![Build Status](https://www.bitrise.io/app/45610b9746e396f5/status.svg?token=OsxReMr5vbhXk7Y0wRuynQ&branch=master)](https://www.bitrise.io/app/45610b9746e396f5)
 [![Twitter](https://img.shields.io/badge/twitter-@Eventflit-blue.svg?style=flat)](http://twitter.com/Eventflit)
 
-This is the Android SDK for the [Push Notifications](https://eventflit.com/push-notifications) service.
+This is the Android SDK for the [Push Notifications](https://eventflit.com/) service.
 
 The SDK is written in Kotlin, but aimed to be as Java-friendly as possible
 
@@ -32,7 +31,7 @@ dependencies {
 
     // Add these lines
     implementation 'com.google.firebase:firebase-messaging:11.8.0'
-    implementation 'com.eventflit:push-notifications-android:0.9.13'
+    implementation 'com.eventflit:push-notifications-android:0.1.0'
 }
 
 // Add this line to the end of the file
@@ -48,10 +47,6 @@ You can find our up-to-date documentation in [here](https://docs.eventflit.com/p
 - Found a bug? Please open an [issue](https://github.com/eventflit/push-notifications-android/issues).
 - Have a feature request. Please open an [issue](https://github.com/eventflit/push-notifications-android/issues).
 - If you want to contribute, please submit a [pull request](https://github.com/eventflit/push-notifications-android/pulls) (preferably with some tests).
-
-## Credits
-
-Push Notifications is owned and maintained by [Eventflit](https://eventflit.com).
 
 ## License
 

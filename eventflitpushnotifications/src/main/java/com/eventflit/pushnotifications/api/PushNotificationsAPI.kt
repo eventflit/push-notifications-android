@@ -13,7 +13,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
 
 class PushNotificationsAPI(private val appId: String) {
-  //private val baseUrl = "http://172.16.71.40:5000/device/app/$appId/"
   private val baseUrl = "http://push.eventflit.com/device/app/$appId/"
 
   private val log = Logger.get(this::class)
