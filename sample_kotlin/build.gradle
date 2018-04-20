@@ -39,8 +39,6 @@ dependencies {
     implementation project(':eventflitpushnotifications')
     lintChecks project(':eventflitpushnotifications-lint')
 
-    implementation 'com.eventflit:eventflit-websocket-android:0.6.0'
-
     implementation "com.google.android.gms:play-services-gcm:${versions.playServices}"
     implementation "com.google.firebase:firebase-core:${versions.playServices}"
     implementation "com.google.firebase:firebase-messaging:${versions.playServices}"
