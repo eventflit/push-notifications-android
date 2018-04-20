@@ -1,5 +1,6 @@
 # Eventflit Push Notifications Android 
 
+[![Build Status](https://www.bitrise.io/app/8c983469864dcfba/status.svg?token=lM8KfOtPHTDnbtr9YVx_nQ&branch=master)](https://www.bitrise.io/app/8c983469864dcfba)
 [![Twitter](https://img.shields.io/badge/twitter-@Eventflit-blue.svg?style=flat)](http://twitter.com/Eventflit)
 
 This is the Android SDK for the [Push Notifications](https://eventflit.com/) service.
